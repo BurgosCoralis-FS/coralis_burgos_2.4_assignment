@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+</head>
+<body>
+    <h1>Settings html</h1>
+
+    {% if session %}
+        Welcome {{ session.userinfo.nickname }} <br>
+        
+        <img src={{ session.userinfo.picture }} alt="user image"/>
+        <br>
+
+        <button>
+            <a href="/dashboard"> Go to Dashboard </a>
+        </button>
+    {% else %}
+    <a>Login</a>
+    {% endif %}
+</body>
+</html>
